@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notes</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Arial; max-width: 800px; margin: 40px auto; padding: 0 16px; }
+    textarea, input, select, button { width: 100%; padding: 10px; margin: 8px 0; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .note { border: 1px solid #ddd; border-radius: 10px; padding: 12px; margin-top: 10px; }
+    .meta { font-size: 12px; opacity: 0.7; }
+    .actions { display: flex; gap: 10px; margin-top: 8px; }
+    .actions button { width: auto; }
+  </style>
+</head>
+<body>
+  <h1>Notes</h1>
+
+  <div class="row">
+    <input id="title" placeholder="Title" />
+    <input id="category" placeholder="Category (e.g., Ideas, Fitness, Study)" />
+  </div>
+
+  <textarea id="content" rows="5" placeholder="Write your note..."></textarea>
+  <button id="addBtn">Save note</button>
+
+  <div class="row">
+    <input id="search" placeholder="Search..." />
+    <select id="filter">
+      <option value="">All categories</option>
+    </select>
+  </div>
+
+  <div id="list"></div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
